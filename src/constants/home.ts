@@ -58,6 +58,12 @@ export const descriptionSectionBottomText =
   '©2025 BeenIruda and GyuZero. All Rights Reserved.';
 
 /** 핸드폰 기종별 화면 비율 데이터 */
+export interface PhoneModelProps {
+  division: string;
+  name: string;
+  width: number;
+  height: number;
+}
 export const phoneModels = [
   { division: 'apple', name: 'iPhone 15 Pro', width: 393, height: 852 },
   { division: 'apple', name: 'iPhone 14 Pro', width: 390, height: 844 },
