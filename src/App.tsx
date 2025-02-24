@@ -1,36 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home.tsx';
+import Layout from './components/layout/Layout.tsx';
+import GlobalStyle from './styles/GlobalStyles.ts';
+import { ThemeProvider } from 'styled-components';
+import { light, dark } from './styles/Theme.ts';
+import { useState } from 'react';
+import CreateKakao from './pages/CreateKakao.tsx';
 
+const App = () => {
+  const [theme, setTheme] = useState('light');
 
-function App() {
-  const [count, setCount] = useState(0)
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <ThemeProvider theme={theme === 'light' ? light : dark}>
+        <GlobalStyle />
+        <Layout theme={theme} toggleTheme={toggleTheme}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/createKakao" element={<CreateKakao />} />
+          </Routes>
+        </Layout>
+      </ThemeProvider>
+    </Router>
+  );
+};
 
-export default App
+export default App;
