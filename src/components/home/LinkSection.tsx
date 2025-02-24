@@ -5,7 +5,6 @@ interface LinkSectionProps {
   linkSetData: {
     title: string;
     image?: string;
-    bgColor: string;
     color: string;
     url: string;
   }[];

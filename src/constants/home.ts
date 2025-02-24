@@ -1,8 +1,5 @@
 import kakaoIcon from '@/assets/images/main/button/kakaoIcon.png';
 import instagramIcon from '@/assets/images/main/button/instagramIcon.png';
-import uploadIcon from '@/assets/images/create/button/uploadIcon.png';
-import downloadIcon from '@/assets/images/create/button/downloadIcon.png';
-
 import slide1 from '@/assets/images/main/slide/slide1.png';
 import slide2 from '@/assets/images/main/slide/slide2.png';
 import slide3 from '@/assets/images/main/slide/slide3.png';
