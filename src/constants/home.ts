@@ -59,16 +59,67 @@ export const descriptionSectionBottomText =
 
 /** 핸드폰 기종별 화면 비율 데이터 */
 export interface PhoneModelProps {
-  division: string;
-  name: string;
-  width: number;
-  height: number;
+  division: string; //기종분류(애플,안드로이드)
+  name: string; //기종이름
+  width: number; //배경화면너비
+  height: number; //배경화면높이
+  profileWidth: number; //프로필화면너비비율
+  profileHeight: number; //프로필화면높이비율
+  profileTopRatio: number; //프로필화면위치(top비율)
 }
 export const phoneModels = [
-  { division: 'apple', name: 'iPhone 15 Pro', width: 393, height: 852 },
-  { division: 'apple', name: 'iPhone 14 Pro', width: 390, height: 844 },
-  { division: 'apple', name: 'iPhone 13 Pro', width: 390, height: 844 },
-  { division: 'apple', name: 'iPhone 12 Pro', width: 390, height: 844 },
-  { division: 'android', name: 'Galaxy S22', width: 360, height: 780 },
-  { division: 'android', name: 'Galaxy S22+', width: 360, height: 780 },
+  {
+    division: 'apple',
+    name: 'iPhone 13 Mini',
+    width: 666,
+    height: 1440,
+    profileWidth: 177,
+    profileHeight: 177,
+    profileTopRatio: 0.61,
+  },
+  {
+    division: 'apple',
+    name: 'iPhone 12 Pro',
+    width: 1170,
+    height: 2532,
+    profileWidth: 300,
+    profileHeight: 300,
+    profileTopRatio: 0.613,
+  },
+  {
+    division: 'android',
+    name: 'Galaxy S23+',
+    width: 1080,
+    height: 2266,
+    profileWidth: 263,
+    profileHeight: 263,
+    profileTopRatio: 0.62,
+  },
+  {
+    division: 'android',
+    name: 'Galaxy S25 울트라',
+    width: 1080,
+    height: 2205,
+    profileWidth: 280,
+    profileHeight: 280,
+    profileTopRatio: 0.61,
+  },
+  {
+    division: 'android',
+    name: 'Galaxy S24',
+    width: 1080,
+    height: 2340,
+    profileWidth: 263,
+    profileHeight: 263,
+    profileTopRatio: 0.63,
+  },
+  {
+    division: 'android',
+    name: 'Galaxy S21',
+    width: 1080,
+    height: 2256,
+    profileWidth: 300,
+    profileHeight: 300,
+    profileTopRatio: 0.62,
+  },
 ];

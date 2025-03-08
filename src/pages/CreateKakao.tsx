@@ -8,8 +8,8 @@ import ButtonSet from '../components/create/ButtonSet';
 const PREVIEW_HEIGHT = 620; //미리보기 화면 높이 고정
 
 const CreateKakao = () => {
-  const [selectedPhone, setSelectedPhone] = useState(phoneModels[0]);
-  const [backgroundImage, setBackgroundImage] = useState<string | null>(null);
+  const [selectedPhone, setSelectedPhone] = useState(phoneModels[0]); //선택된 폰 기종
+  const [backgroundImage, setBackgroundImage] = useState<string | null>(null); //배경이미지
   const previewRef = useRef<HTMLDivElement>(null); // 캡처할 미리보기 영역
   const [previewWidth, setPreviewWidth] = useState(
     (PREVIEW_HEIGHT * phoneModels[0].width) / phoneModels[0].height
@@ -25,25 +25,30 @@ const CreateKakao = () => {
 
   return (
     <Layout>
+      {/** I. 배너 */}
       <Banner>카카오톡 프로필 &amp; 배경을 하나의 사진처럼!</Banner>
+      {/** II. 내용 */}
       <Contents>
         <div className="previewSet">
-          {/** 핸드폰 기종 선택 */}
+          {/** 1. 핸드폰 기종 선택 */}
           <SelectPhoneModel
             selectedPhone={selectedPhone}
             setSelectedPhone={setSelectedPhone}
           />
-          {/** 미리보기 화면 */}
+          {/** 2. 미리보기 화면 */}
           <Preview
             width={previewWidth}
             height={PREVIEW_HEIGHT}
             backgroundImage={backgroundImage}
+            ref={previewRef}
           />
         </div>
-        {/** 버튼셋(사진업로드, 다운로드) */}
+        {/** 3. 버튼셋(사진업로드, 다운로드) */}
         <ButtonSet
           setBackgroundImage={setBackgroundImage}
           previewRef={previewRef}
+          PREVIEW_HEIGHT={PREVIEW_HEIGHT}
+          selectedPhone={selectedPhone}
         />
       </Contents>
     </Layout>
