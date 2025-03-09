@@ -46,8 +46,7 @@ const CreateKakao = () => {
         {/** 3. 버튼셋(사진업로드, 다운로드) */}
         <ButtonSet
           setBackgroundImage={setBackgroundImage}
-          previewRef={previewRef}
-          PREVIEW_HEIGHT={PREVIEW_HEIGHT}
+          backgroundImage={backgroundImage}
           selectedPhone={selectedPhone}
         />
       </Contents>
