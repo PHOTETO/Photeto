@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import Slide from '../common/Slide';
-import { mainSlideImages } from '../../constants/home';
+import styled from "styled-components";
+import Slide from "../common/Slide";
+import { mainSlideImages } from "../../constants/home.ts";
 
 const MainSection = () => {
   return (

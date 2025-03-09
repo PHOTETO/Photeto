@@ -29,12 +29,11 @@ const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1004;
-
-  width: 100%;
+  right: 0;
+  margin: auto;
+  z-index: 1004; // ?? 어디서 내려온 천사..
+  width: 415px;
   height: 80px;
-
-  background: #fff;
 `;
 
 const Inner = styled.div`
@@ -42,7 +41,7 @@ const Inner = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 100%;
   inset: 0;
   margin: auto;

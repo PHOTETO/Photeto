@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import UtterancesComment from "../common/UtterancesComment.tsx";
 
 const Footer = () => {
     const footerObj = [
@@ -44,6 +45,7 @@ const Footer = () => {
                     })
                 }
             </ButtonList>
+            <UtterancesComment />
         </FooterContainer>
     );
 };

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Slide = ({ images }: { images: string[] }) => {
 
