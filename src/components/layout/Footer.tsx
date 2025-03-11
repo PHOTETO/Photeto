@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import UtterancesComment from "../common/UtterancesComment.tsx";
 
 const Footer = () => {
     const footerObj = [
@@ -45,15 +44,15 @@ const Footer = () => {
                     })
                 }
             </ButtonList>
-            <UtterancesComment />
         </FooterContainer>
     );
 };
 
 const FooterContainer = styled.footer`
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 80px;
+    margin: auto;
 `;
 
 const ButtonList = styled.div`

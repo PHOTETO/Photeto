@@ -32,7 +32,7 @@ const HeaderContainer = styled.header`
   right: 0;
   margin: auto;
   z-index: 1004; // ?? 어디서 내려온 천사..
-  width: 415px;
+  width: 90%;
   height: 80px;
 `;
 
