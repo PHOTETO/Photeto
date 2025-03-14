@@ -67,6 +67,7 @@ export interface PhoneModelProps {
   profileHeight: number; //프로필화면높이비율
   profileTopRatio: number; //프로필화면위치(top비율)
 }
+
 export const phoneModels = [
   {
     division: 'apple',
@@ -85,6 +86,15 @@ export const phoneModels = [
     profileWidth: 300,
     profileHeight: 300,
     profileTopRatio: 0.613,
+  },
+  {
+    division: 'apple',
+    name: 'iPhone 15 Pro',
+    width: 1179,
+    height: 2256,
+    profileWidth: 300,
+    profileHeight: 300,
+    profileTopRatio: 0.616,
   },
   {
     division: 'android',
@@ -121,5 +131,14 @@ export const phoneModels = [
     profileWidth: 300,
     profileHeight: 300,
     profileTopRatio: 0.62,
+  },
+  {
+    division: 'android',
+    name: 'Z Flip 4',
+    width: 1080,
+    height: 2640,
+    profileWidth: 300,
+    profileHeight: 300,
+    profileTopRatio: 0.6125,
   },
 ];
