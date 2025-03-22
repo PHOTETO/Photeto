@@ -10,6 +10,23 @@ import sub from '@/assets/images/main/description/sub.png';
 import title from '@/assets/images/main/description/title.png';
 import what from '@/assets/images/main/description/what.png';
 
+/* Header side*/
+export const headerSideContent = [
+  {
+    url: "createKakao",
+    content: "카톡 프로필 만들러 가기"
+  },
+  {
+    url: "",
+    content: "포테토 인스타그램 만들러 가기"
+  },
+  {
+    url: "feedback",
+    content: "피드백 스페이스"
+  }
+
+]
+
 /** 메인 버튼단(카톡 프로필 만들러 가기, 인스타 썸네일 만들러 가기) */
 export const mainLinkButtons = [
   {
@@ -17,12 +34,14 @@ export const mainLinkButtons = [
     image: kakaoIcon,
     color: '#391B1B',
     url: '/createKakao',
+    usingState: true
   },
   {
-    title: '인스타 썸네일 만들러 가기',
+    title: 'COMING SOON...',
     image: instagramIcon,
     color: 'linear-gradient(90deg, #8a2be2, #ff0066);',
     url: '/createInstagram',
+    usingState: false
   },
 ];
 

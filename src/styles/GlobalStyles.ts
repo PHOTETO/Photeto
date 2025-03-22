@@ -43,6 +43,9 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         object-fit: cover;
     }
+    
+    /* 애니메이션 효과 지정 */
+    
 `;
 
 export default GlobalStyle;

@@ -3,7 +3,7 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import { LayoutProps } from './type';
-import UtterancesComment from '../common/UtterancesComment';
+// import UtterancesComment from '../common/UtterancesComment';
 
 const Layout = ({ toggleTheme, theme, children }: LayoutProps) => {
   return (
@@ -11,7 +11,7 @@ const Layout = ({ toggleTheme, theme, children }: LayoutProps) => {
       <Header theme={theme} toggleTheme={toggleTheme} />
       <Main>{children}</Main>
       <Footer />
-      <UtterancesComment theme={theme}/>
+      {/*<UtterancesComment theme={theme}/>*/}
     </Container>
   );
 };
@@ -23,6 +23,7 @@ const Container = styled.div`
   max-width: 415px;
   width: 100%;
   margin: auto;
+  background: ${({ theme }) => theme.background};
 `;
 
 export default Layout;
