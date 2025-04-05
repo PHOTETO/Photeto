@@ -15,12 +15,11 @@ const ToggleThemeButton = ({theme, toggleTheme}: IHeaderProps) => {
 const ThemeButtonBox = styled.div`
     position: relative;
     background: ${({theme}) => theme.button.toggleThemeButtonColor};
-    width: 60px;
-    height: 30px;
+    width: 50px;
+    height: 25px;
     font-size: 15px;
     border-radius: 30px;
     box-sizing: border-box;
-    margin-left: 30%;
     background: ${({theme}) => theme.hoverBackground};
     box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -40,10 +39,11 @@ const ThemeInner = styled.span<{ theme: string }>`
     align-items: center;
     transform: ${({theme}) => (theme === "light" ? "translateX(120%)" : "translateX(20%)")};
     transition: .3s;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background: ${({theme}) => (theme === "light" ? "#fff" : "#000")};
     border-radius: 50%;
+    font-size: 12px;
 `;
 
 export default ToggleThemeButton;

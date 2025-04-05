@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     /* 버튼 기본 스타일 */
     button {
         background: transparent;
