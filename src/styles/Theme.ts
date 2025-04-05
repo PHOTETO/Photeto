@@ -4,6 +4,7 @@ export const light = {
   sectionBackground: "#fff",
   hoverBackground: "#F0F0F0",
   text: '#000000',
+  hoverColor: "#444",
   button: {
     toggleThemeButtonColor: '#fff',
     toggleThemeButtonHoverColor: '#333',
@@ -16,6 +17,7 @@ export const dark = {
   sectionBackground: '#181818',
   hoverBackground: "#2D2D2D",
   text: '#ffffff',
+  hoverColor: "#e3e3e3",
   button: {
     toggleThemeButtonColor: '#181818',
     toggleThemeButtonHoverColor: '#ECECEC',
