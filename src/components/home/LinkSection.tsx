@@ -21,7 +21,7 @@ const LinkSection = ({ linkSetData = [] }: LinkSectionProps) => {
             <LinkButton
               key={index}
               color={obj.color}
-              usingState={obj.usingState}
+              $usingState={obj.usingState}
               disabled={!obj.usingState}
               onClick={() => navigate(obj.url)}
             >
@@ -47,7 +47,7 @@ const LinkButtons = styled.div`
   gap: 20px;
 `;
 
-const LinkButton = styled.button<{ color: string, usingState: boolean }>`
+const LinkButton = styled.button<{ color: string, $usingState: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,8 +57,8 @@ const LinkButton = styled.button<{ color: string, usingState: boolean }>`
   border-radius: 10px;
   border: 0;
   background: ${($props) => $props.color};
-  cursor: ${({ usingState }) => usingState ? "pointer" : "not-allowed" };
-  opacity: ${({ usingState }) => usingState ? "1" : "0.2" };
+  cursor: ${({ $usingState }) => $usingState ? "pointer" : "not-allowed" };
+  opacity: ${({ $usingState }) => $usingState ? "1" : "0.2" };
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 `;
 

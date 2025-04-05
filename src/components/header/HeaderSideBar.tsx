@@ -6,7 +6,7 @@ const HeaderSideBar = ({theme, menuState}: { theme: string, menuState: boolean }
     const navigate = useNavigate();
 
     return (
-        <SideContainer theme={theme} menuState={menuState}>
+        <SideContainer theme={theme} $menuState={menuState}>
             <SideInner>
                 <SideTitle>메뉴</SideTitle>
                 <SideList>
@@ -26,7 +26,7 @@ const HeaderSideBar = ({theme, menuState}: { theme: string, menuState: boolean }
     )
 }
 
-const SideContainer = styled.div<{ theme: string, menuState: boolean }>`
+const SideContainer = styled.div<{ theme: string, $menuState: boolean }>`
     position: fixed;
     left: 0;
     width: 100%;
@@ -34,8 +34,8 @@ const SideContainer = styled.div<{ theme: string, menuState: boolean }>`
     font-weight: 700;
     z-index: 100;
     transition: .3s;
-    transform: ${({menuState}) => menuState ? "translateX(0%)" : "translateX(100%)"};
-    opacity: ${({menuState}) => menuState ? "1" : "0"};
+    transform: ${({$menuState}) => $menuState ? "translateX(0%)" : "translateX(100%)"};
+    opacity: ${({$menuState}) => $menuState ? "1" : "0"};
     background: ${({theme}) => theme === "light"
             ? "rgba(255, 255, 255, .7)"
             : "rgba(0, 0, 0, 0.7)"};
@@ -61,10 +61,15 @@ const SideList = styled.ul`
     align-items: start;
     gap: 40px;
     margin-top: 40px;
+    transition: .3s;
 `;
 
 const SideContent = styled.li`
     cursor: pointer;
+    transition: .2s;
+    &:hover {
+        color: ${({theme}) => theme.hoverColor};
+    }
 `;
 
 export default HeaderSideBar;

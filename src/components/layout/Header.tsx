@@ -35,10 +35,12 @@ const Header = ({theme, toggleTheme}: IHeaderProps) => {
                 <Logo onClick={() => navigate('/')}>
                     {logo}
                 </Logo>
-                <ToggleThemeButton theme={theme} toggleTheme={toggleTheme}/>
-                <Menu onClick={() => setMenuState(prev => !prev)} menuState={menuState}>
-                    {menuLineLoop()}
-                </Menu>
+                <ToggleGroup>
+                    <ToggleThemeButton theme={theme} toggleTheme={toggleTheme}/>
+                    <Menu onClick={() => setMenuState(prev => !prev)} $menuState={menuState}>
+                        {menuLineLoop()}
+                    </Menu>
+                </ToggleGroup>
             </Inner>
             {
                 <HeaderSideBar theme={theme} menuState={menuState}/>
@@ -80,7 +82,13 @@ const Logo = styled.div`
     }
 `;
 
-const Menu = styled.div<{menuState: boolean}>`
+const ToggleGroup = styled.div`
+    display: flex;
+    gap: 20px;
+    align-items: center;
+`;
+
+const Menu = styled.div<{$menuState: boolean}>`
     position: relative;
     display: flex;
     flex-direction: column;
@@ -91,15 +99,15 @@ const Menu = styled.div<{menuState: boolean}>`
     span {
         transition: transform .3s;
         &:first-child {
-            position: ${({menuState}) => menuState ? "absolute" : "static"};
-            transform: ${({menuState}) => menuState ? "rotate(130deg)" : "rotate(0deg)"};
+            position: ${({$menuState}) => $menuState ? "absolute" : "static"};
+            transform: ${({$menuState}) => $menuState ? "rotate(130deg)" : "rotate(0deg)"};
         }
         &:nth-child(2) {
-            opacity: ${({menuState}) => menuState ? "0" : "1"};
+            opacity: ${({$menuState}) => $menuState ? "0" : "1"};
         }
         &:last-child {
-            position: ${({menuState}) => menuState ? "absolute" : "static"};
-            transform: ${({menuState}) => menuState ? "rotate(50deg)" : "rotate(0deg)"};
+            position: ${({$menuState}) => $menuState ? "absolute" : "static"};
+            transform: ${({$menuState}) => $menuState ? "rotate(50deg)" : "rotate(0deg)"};
         }
         width: 20px;
         height: 2px;

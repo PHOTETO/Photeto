@@ -9,11 +9,11 @@ const DescriptionSection = () => {
                 {
                     descriptionImageObject.map((obj, index) => {
                         return (
-                            <SectionImage 
-                                src={obj.image} 
-                                key={index} 
+                            <SectionImage
+                                src={obj.image}
+                                key={index}
                                 width={obj.width}
-                                bottomGap={obj.bottom}
+                                $bottomGap={obj.bottom}
                             />
                         )
                     })
@@ -49,8 +49,8 @@ const SectionImages = styled.div`
     margin-top: 5%;
 `;
 
-const SectionImage = styled.img<{bottomGap: number}>`
-    margin-bottom: ${props => props.bottomGap}%;
+const SectionImage = styled.img<{$bottomGap: number}>`
+    margin-bottom: ${props => props.$bottomGap}%;
     &:first-child {
         margin-top: 5%;
     }
