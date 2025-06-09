@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import { light, dark } from './styles/Theme.ts';
 import { useState } from 'react';
 import CreateKakao from './pages/CreateKakao.tsx';
+import Feedback from "./components/feedback/Feedback.tsx";
 
 const App = () => {
   const [theme, setTheme] = useState('light');
@@ -22,6 +23,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/createKakao" element={<CreateKakao />} />
+            <Route path="/feedback" element={<Feedback />} />
           </Routes>
         </Layout>
       </ThemeProvider>

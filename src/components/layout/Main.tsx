@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import UtterancesComment from '../common/UtterancesComment';
 
 type MainProps = {
   children: React.ReactNode;
@@ -21,7 +20,7 @@ const MainContainer = styled.main`
   padding-top: 80px;
   padding-bottom: 40px;
   width: 90%;
-  background: ${({ theme }) => theme.sectionBackground};
+  background: ${({ theme }) => theme.background};
   transition: 0.3s;
   margin: auto;
 `;

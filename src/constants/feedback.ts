@@ -1,0 +1,1 @@
+export const title = "포테토 서비스에 대한 피드백을 달아주세요!";

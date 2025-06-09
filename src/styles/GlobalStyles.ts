@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     /* 버튼 기본 스타일 */
     button {
         background: transparent;
@@ -43,6 +47,9 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         object-fit: cover;
     }
+    
+    /* 애니메이션 효과 지정 */
+    
 `;
 
 export default GlobalStyle;
